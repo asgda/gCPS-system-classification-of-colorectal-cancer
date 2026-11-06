@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "gCPS system classification of colorectal cancer: analysis code"
+authors:
+  - family-names: Sengupta
+    given-names: Avik
+  - family-names: Kumar
+    given-names: Rahul
+repository-code: "https://github.com/asgda/gCPS-system-classification-of-colorectal-cancer"
+license: MIT
+version: v1.0.0
+date-released: "2026-11-15"
