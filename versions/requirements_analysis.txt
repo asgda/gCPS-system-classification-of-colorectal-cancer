@@ -1,0 +1,17 @@
+# Python 3.10.14, steps 01-04, 06, 07, 09-16, 18-20, 25, 27, 29-31
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.15.2
+scikit-learn==1.7.2
+imbalanced-learn==0.14.2
+xgboost==3.2.0
+shap==0.48.0
+statsmodels==0.14.6
+lifelines==0.30.0
+umap-learn==0.5.12
+numba==0.68.1
+llvmlite==0.50.0
+joblib==1.6.0
+matplotlib==3.10.9
+seaborn==0.13.2
+openpyxl==3.1.5

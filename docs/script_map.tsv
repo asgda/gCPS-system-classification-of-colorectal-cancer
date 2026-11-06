@@ -1,0 +1,33 @@
+step	script	analysis	manuscript items
+01	01_build_snv_features.py	short-variant features from VEP-annotated calls	Methods, Feature construction
+02	02_build_cnv_features.py	gene- and arm-level copy-number features, directional matrix	Methods, Feature construction
+03	03_build_sv_features.py	structural-variant features, junction counts, SV classes	Methods, Feature construction
+04	04_merge_modalities.py	371-feature binary matrix (210 SNV, 130 CNV, 31 SV)	Figure 1
+05	05_discover_gcps_subtypes.py	NMF k=4-6, cross-fitting, null matrices, resampling, frozen gCPS labels, PCA/UMAP	Figure 2; Supplementary Table S1a
+06	06_facets_ploidy_wgd.py	FACETS purity, ploidy, WGD; gCPS4-vs-gCPS1 contrast against diploid and own ploidy	Figure 4B; Supplementary Table S3b-d
+07	07_baseline_characteristics.py	baseline clinical and genomic characteristics	Supplementary Table S1b
+08	08_survival_analysis.R	OS and RFS Cox models, pairwise contrasts, Kaplan-Meier, forest plot, proportional hazards	Figure 3; Supplementary Table S2
+09	09_survival_sensitivity.py	confounder-adjusted gCPS4-vs-gCPS1 models; stage II-III MSS tumors	Table 1; Supplementary Table S2
+10	10_feature_enrichment.py	one-vs-rest Fisher tests for every feature	Figures 4A, 5A-D; Supplementary Table S3
+11	11_feature_heatmap.py	rule-based heatmap of the most prevalent features per modality	Figure 5E; Supplementary Table S3
+12	12_mutational_signatures.py	mutational-process (etiology) composition, gCPS4 effect sizes	Figures 4C-D; Supplementary Table S3
+13	13_pathway_analysis.py	pathway co-alteration, convergent CNV-loss + SV dual hits	Supplementary Table S4
+14	14_genomic_burden.py	TMB, SV junctions, copy-number gain, loss and LOH burden	Supplementary Table S3
+15	15_sv_mechanism.py	SV class fractions and dominant class	Supplementary Figure S2B-D; Supplementary Table S5
+16	16_prepare_shatterseek_inputs.py	breakpoint and segment tables for ShatterSeek	Methods
+17	17_run_shatterseek.R	ShatterSeek chromosome statistics	Methods
+18	18_chromothripsis_by_subtype.py	high-confidence chromothripsis by subtype	Results, SV mechanism
+19	19_hrd_scar_score.py	LOH, TAI, LST scar score	Supplementary Figure S5A; Supplementary Table S9
+20	20_within_gcps4_survival.py	survival within gCPS4 by dual-hit status and scar score	Supplementary Table S2
+21	21_differential_expression.R	limma-voom, each subtype against the others	Figure 6A; Supplementary Figure S3; Supplementary Table S7a-b
+22	22_gsva_pathways.R	GSVA Hallmark and KEGG scores	Figure 6F-G; Supplementary Table S7h-i
+23	23_estimate_scores.R	ESTIMATE scores	Figure 6C
+24	24_tide_scores.py	TIDE scores (tidepy)	Figure 6E
+25	25_immune_signature_tests.py	EMT, stemness, proliferation, ESTIMATE, CIBERSORT and TIDE by subtype; MSS-restricted TIDE	Figure 6B-E; Supplementary Table S7c-g
+26	26_oncopredict.R	predicted GDSC2 drug response	Figure 6H
+27	27_supervised_classifiers.py	seven classifiers, SHAP importance	Supplementary Figure S4A-C; Supplementary Table S8a-b
+28	28_resnet1d_classifier.py	1D-ResNet	Supplementary Table S8b
+29	29_modality_dropout.py	modality dropout by cross-fitting	Supplementary Figure S4D; Supplementary Table S8c
+30	30_drug_sensitivity.py	drug-level tests, PARP inhibitors, immune context	Figure 6H; Supplementary Table S7j, S9d-e
+31	31_expression_system_concordance.py	agreement with CMS, CRPS, iCMS; added prognostic value	Figure 7; Table 2; Supplementary Table S2, S10
+32	32_classifier_roc_panels.py	macro ROC curves, cross-validation and held-out test	Supplementary Figure S4A-B
